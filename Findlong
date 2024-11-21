@@ -1,0 +1,24 @@
+package Findlong;
+
+public class Findd {
+
+	public static void main(String[] args) {
+	String str1 = "I love Java Programming Language";
+	String[] splited = str1.split(" ");//splitting the string with space to identify each word in the sentence
+	
+	
+	String data1 = splited[0];//taking first word in data1
+	int wordplace = 0;  // taking counter 0
+	for(String str2 : splited) {  //for each word we are running the loop
+		if(wordplace >0) 
+		{
+			if(str2.length() > data1.length())
+			{
+				data1 = str2;
+			}
+		}
+		wordplace = wordplace + 1;
+	}
+System.out.println(data1);
+}
+}
